@@ -1,8 +1,38 @@
-# تحلیل و بهینه‌سازی با YourKit
+
+### نسخه بهینه‌شده:
+
+```java
+public static void findPrimes() {
+    int count = 0;
+
+    if (1_000_000 >= 2) {
+        count++;  // 2 is prime
+    }
+
+    for (int i = 3; i < 1_000_000; i += 2) {
+        boolean isPrime = true;
+        int sqrt = (int) Math.sqrt(i);
+
+        for (int j = 3; j <= sqrt; j += 2) {
+            if (i % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) count++;
+    }
+
+    System.out.println("Primes found: " + count);
+}
+```
+![پروفایل findPrimes](./images/4.png)
+
+### نتایج نهایی
+
+پس از اعمال بهینه‌سازی:
+- زمان اجرای کلی کاهش یافت.
+- مصرف CPU تابع `()findPrimes` کمتر شد.
+
 ---
 
-## مقدمه
-
-در این پروژه، با استفاده از ابزار YourKit Java Profiler، دو برنامه جاوا مورد بررسی و تحلیل عملکرد (Profiling) قرار گرفتند. هدف اصلی، شناسایی بخش‌هایی از کد بود که بیشترین مصرف منابع (CPU و حافظه) را داشتند، و سپس بهینه‌سازی آن بخش‌ها به‌گونه‌ای که مصرف منابع کاهش یابد، بدون آنکه عملکرد برنامه مختل شود یا بخش‌هایی از آن حذف گردد.
-
----
