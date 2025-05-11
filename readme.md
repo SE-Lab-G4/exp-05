@@ -18,7 +18,7 @@
 در اجرای اولیه:
 - مصرف حافظه و زمان اجرا بسیار بالا میباشد.
 
-![قبل از بهینه‌سازی](1.png)
+![قبل از بهینه‌سازی](images/1.png)
 
 ### نسخه اولیه تابع:
 
@@ -63,7 +63,7 @@ public static void temp() {
 - مصرف CPU و حافظه کاهش یافته.
 - تابع `()temp` دیگر در بالای لیست مصرف‌کنندگان منابع نمیباشد.
 
-![بعد از بهینه‌سازی](2.png)
+![بعد از بهینه‌سازی](images/2.png)
 
 ---
 
@@ -97,7 +97,7 @@ public static void findPrimes() {
 - تابع `()findPrimes` بیش از ۹۹٪ زمان CPU را به خود اختصاص میدهد.
 - کاملاً به عنوان گلوگاه (bottleneck) قابل شناسایی میباشد.
 
-![پروفایل findPrimes](3.png)
+![پروفایل findPrimes](images/3.png)
 
 ---
 
@@ -137,7 +137,7 @@ public static void findPrimes() {
     System.out.println("Primes found: " + count);
 }
 ```
-![پروفایل findPrimes](4.png)
+![پروفایل findPrimes](images/4.png)
 
 ### نتایج نهایی
 
